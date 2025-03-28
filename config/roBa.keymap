@@ -67,13 +67,13 @@
 
         default_layer {
             bindings = <
-&kp ESC         &kp LG(W)     &kp LG(P)     &kp UP     &none                                      &kp LG(N0)     &kp F15        &kp F13   &kp UP    &kp F14
-&kp LG(A)       &kp LG(S)     &kp LG(D)     &kp LG(F)  &kp HOME     &kp CAPS       &kp TAB        &kp LG(PLUS)   &kp LG(RIGHT)  &kp LEFT  &kp DOWN  &kp RIGHT
-&kp LG(Z)       &kp LG(X)     &kp LG(C)     &kp LG(V)  &kp END      &kp LANG2      &kp LANG1      &kp LG(MINUS)  &kp LG(LEFT)   &mkp MB1  &mo 5     &mkp MB2
-&kp LEFT_SHIFT  &kp LEFT_WIN  &kp LEFT_ALT  &mo 3      &lt 2 SPACE  &mo 1          &kp BACKSPACE  &kp ENTER                                         &mt RCTRL DEL
+&kp ESC                  &kp LG(W)     &kp LG(P)     &kp UP     &none                                                &none         &kp F15        &kp F13   &kp UP    &kp F14
+&kp LG(A)                &kp LG(S)     &kp LG(D)     &kp LG(F)  &none        &kp LG(KP_NUMBER_0)      &kp TAB        &kp LG(HOME)  &kp LG(RIGHT)  &kp LEFT  &kp DOWN  &kp RIGHT
+&kp LG(Z)                &kp LG(X)     &kp LG(C)     &kp LG(V)  &none        &kp LANG2                &kp LANG1      &kp LG(END)   &kp LG(LEFT)   &mkp MB1  &mo 5     &mkp MB2
+&mt LEFT_SHIFT CAPSLOCK  &kp LEFT_WIN  &kp LEFT_ALT  &mo 3      &lt 2 SPACE  &mo 1                    &kp BACKSPACE  &kp ENTER                                        &mt RCTRL DEL
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
+            sensor-bindings = <&inc_dec_kp LG(KP_PLUS) LG(KP_MINUS)>;
         };
 
         input {
@@ -96,10 +96,10 @@
 
         number {
             bindings = <
-&kp F1        &kp F2        &kp F3        &kp F4   &kp F5                       &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp EQUAL        &kp KP_PLUS
-&kp F6        &kp F7        &kp F8        &kp F9   &kp F10  &trans      &trans  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_DOT       &kp KP_MINUS
-&none         &none         &trans        &kp F11  &kp F12  &trans      &trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_0  &kp KP_ASTERISK
-&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans   &trans   &trans      &trans  &trans                                                              &kp KP_SLASH
+&kp F1        &kp F2        &kp F3        &kp F4   &kp F5                                &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_EQUAL     &kp KP_PLUS
+&kp F6        &kp F7        &kp F8        &kp F9   &kp F10  &trans      &trans           &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_DOT       &kp KP_MINUS
+&kp F11       &kp F12       &kp F13       &kp F14  &kp F15  &trans      &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_0  &kp KP_ASTERISK
+&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans   &trans   &trans      &trans           &trans                                                              &kp KP_SLASH
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
