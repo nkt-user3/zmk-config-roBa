@@ -88,10 +88,10 @@
 
         default_layer {
             bindings = <
-&kp ESC              &kp LG(W)     &kp LG(P)     &kp LC(UP)  &h4                                                  &none         &kp F15        &kp F13   &kp UP    &kp F14
-&kp LG(A)            &kp LG(S)     &kp LG(D)     &kp LG(F)   &h3          &kp LG(KP_NUMBER_0)      &kp TAB        &kp LG(HOME)  &kp LG(RIGHT)  &kp LEFT  &kp DOWN  &kp RIGHT
-&kp LG(Z)            &kp LG(X)     &kp LG(C)     &kp LG(V)   &h2          &kp LANG2                &kp LANG1      &kp LG(END)   &kp LG(LEFT)   &mkp MB1  &mo 5     &mkp MB2
-&mt LEFT_SHIFT CLCK  &kp LEFT_WIN  &kp LEFT_ALT  &mo 3       &lt 5 SPACE  &mo 1                    &kp BACKSPACE  &kp ENTER                                        &mt RCTRL DEL
+&kp ESC                  &kp LG(W)     &kp LG(P)     &kp LC(UP)  &h4                                                  &none         &kp F15        &kp F13   &kp UP    &kp F14
+&kp LG(A)                &kp LG(S)     &kp LG(D)     &kp LG(F)   &h3          &kp LG(KP_NUMBER_0)      &kp TAB        &kp LG(HOME)  &kp LG(RIGHT)  &kp LEFT  &kp DOWN  &kp RIGHT
+&kp LG(Z)                &kp LG(X)     &kp LG(C)     &kp LG(V)   &h2          &kp LANG2                &kp LANG1      &kp LG(END)   &kp LG(LEFT)   &mkp MB1  &mo 5     &mkp MB2
+&mt LEFT_SHIFT CAPSLOCK  &kp LEFT_WIN  &kp LEFT_ALT  &mo 3       &lt 5 SPACE  &mo 1                    &kp BACKSPACE  &kp ENTER                                        &mt RCTRL DEL
             >;
 
             sensor-bindings = <&inc_dec_kp LG(KP_PLUS) LG(KP_MINUS)>;
