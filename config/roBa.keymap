@@ -13,7 +13,14 @@
 };
 
 / {
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        user {
+            bindings = <&username>;
+            key-positions = <39 41>;
+        };
+    };
 
     macros {
         to_layer_0: to_layer_0 {
@@ -26,22 +33,29 @@
         h2: h2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LANG2 &kp KP_SLASH &kp H &kp KP_NUMBER_2>;
+            bindings = <&kp LANG2 &kp KP_SLASH &kp H &kp KP_NUMBER_2 &kp LANG1>;
             label = "H2";
         };
 
         h3: h3 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LANG2 &kp KP_SLASH &kp H &kp KP_NUMBER_3>;
+            bindings = <&kp LANG2 &kp KP_SLASH &kp H &kp KP_NUMBER_3 &kp LANG1>;
             label = "H3";
         };
 
         h4: h4 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LANG2 &kp KP_SLASH &kp H &kp KP_NUMBER_4>;
+            bindings = <&kp LANG2 &kp KP_SLASH &kp H &kp KP_NUMBER_4 &kp LANG1>;
             label = "H4";
+        };
+
+        username: password1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANG2 &kp A &kp Z &kp U &kp R &kp E &kp KP_N6 &kp KP_N1 &kp KP_N4 &kp LANG1>;
+            label = "PASSWORD1";
         };
     };
 
