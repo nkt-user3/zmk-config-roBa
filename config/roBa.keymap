@@ -75,10 +75,10 @@
 
         default_layer {
             bindings = <
-&kp ESC         &kp LG(W)     &kp F13       &kp F14    &kp TAB                                              &kp F15    &none          &none     &kp UP    &kp LC(UP_ARROW)
-&kp LG(A)       &kp LG(S)     &kp LG(D)     &kp LG(F)  &none        &kp LG(KP_NUMBER_0)      &none          &none      &kp LG(RIGHT)  &kp LEFT  &kp DOWN  &kp RIGHT
-&kp LG(Z)       &kp LG(X)     &kp LG(C)     &kp LG(V)  &kp LG(B)    &kp LANG2                &kp LANG1      &none      &kp LG(LEFT)   &mkp MB1  &mo 5     &mkp MB2
-&kp LEFT_SHIFT  &kp LEFT_WIN  &kp LEFT_ALT  &mo 3      &lt 2 SPACE  &mo 5                    &kp BACKSPACE  &kp ENTER                                     &mt RCTRL DEL
+&kp ESC         &kp LG(W)     &kp F13       &kp F14    &kp TAB                                              &kp LC(UP_ARROW)  &kp F15        &none     &kp UP    &none
+&kp LG(A)       &kp LG(S)     &kp LG(D)     &kp LG(F)  &kp LG(G)    &kp LG(KP_NUMBER_0)      &none          &kp LG(H)         &kp LG(RIGHT)  &kp LEFT  &kp DOWN  &kp RIGHT
+&kp LG(Z)       &kp LG(X)     &kp LG(C)     &kp LG(V)  &kp LG(B)    &kp LANG2                &kp LANG1      &kp LG(N)         &kp LG(LEFT)   &mkp MB1  &mo 5     &mkp MB2
+&kp LEFT_SHIFT  &kp LEFT_WIN  &kp LEFT_ALT  &mo 3      &lt 2 SPACE  &mo 5                    &kp BACKSPACE  &kp ENTER                                            &mt RCTRL DEL
             >;
 
             sensor-bindings = <&inc_dec_kp LG(KP_PLUS) LG(KP_MINUS)>;
@@ -96,9 +96,9 @@
         simbol {
             bindings = <
 &kp GRAVE      &kp LS(DQT)   &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)                            &kp LS(AMPS)  &kp SINGLE_QUOTE  &kp LS(LPAR)  &kp LS(RPAR)   &kp AT
-&kp LS(EQUAL)  &kp LS(PLUS)  &kp LS(STAR)   &kp MINUS     &kp LS(TILDE)  &trans      &trans        &kp COLON     &kp SEMICOLON     &kp LBKT      &kp RBKT       &kp LS(UNDER)
-&none          &kp LS(LT)    &kp LS(GT)     &none         &none          &trans      &kp CAPSLOCK  &none         &none             &kp LS(EXCL)  &kp LS(QMARK)  &kp FSLH
-&trans         &trans        &trans         &trans        &trans         &trans      &trans        &trans                                                       &trans
+&kp LS(EQUAL)  &kp LS(PLUS)  &kp LS(STAR)   &kp MINUS     &kp LS(TILDE)  &trans            &trans  &kp COLON     &kp SEMICOLON     &kp LBKT      &kp RBKT       &kp LS(UNDER)
+&none          &kp LS(LT)    &kp LS(GT)     &none         &none          &kp CAPSLOCK      &none   &none         &none             &kp LS(EXCL)  &kp LS(QMARK)  &kp FSLH
+&trans         &trans        &trans         &trans        &trans         &trans            &trans  &trans                                                       &trans
             >;
         };
 
