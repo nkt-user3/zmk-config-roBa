@@ -67,6 +67,29 @@
             bindings = <&kp LANG2 &kp A &kp Z &kp U &kp R &kp E &kp KP_N6 &kp KP_N1 &kp KP_N4 &kp LANG1>;
             label = "PASSWORD1";
         };
+
+        ipad: toipad {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 1>, <&macro_wait_time 200>, <&to 6>;
+
+            label = "TOIPAD";
+        };
+
+        mac: mac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 0>, <&macro_wait_time 200>, <&to 0>;
+
+            label = "MAC";
+        };
+
+        ipadappswitch: ipadappswitch {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp CLCK>;
+            label = "IPADAPPSWITCH";
+        };
     };
 
     behaviors {
@@ -85,10 +108,10 @@
 
         mac_default_layer {
             bindings = <
-&kp ESC         &kp LG(W)     &kp LG(E)     &kp LG(R)  &kp TAB                                              &kp LC(UP_ARROW)   &kp F15        &mt F13 LEFT_SHIFT  &kp UP    &mt F14 RIGHT_SHIFT
-&kp LG(A)       &kp LG(S)     &kp LG(D)     &kp LG(F)  &kp LG(G)    &kp LG(KP_NUMBER_0)      &none          &kp LG(SPACE)      &kp LG(RIGHT)  &kp LEFT            &kp DOWN  &kp RIGHT
-&kp LG(Z)       &kp LG(X)     &kp LG(C)     &kp LG(V)  &kp LG(B)    &mt CAPSLOCK LANG2       &kp LANG1      &kp LA(LS(LG(L)))  &kp LG(LEFT)   &mkp MB1            &mo 5     &mkp MB2
-&kp LEFT_SHIFT  &kp LEFT_WIN  &kp LEFT_ALT  &mo 3      &lt 4 SPACE  &mo 5                    &kp BACKSPACE  &kp ENTER                                                       &mt RCTRL DEL
+&kp ESC          &kp LG(W)     &kp LG(E)     &kp LG(R)  &kp TAB                                              &kp LC(UP_ARROW)   &kp F15        &mt F13 LEFT_SHIFT  &kp UP    &mt F14 RIGHT_SHIFT
+&mt CAPS LG(A)   &kp LG(S)     &kp LG(D)     &kp LG(F)  &kp LG(G)    &kp LG(KP_NUMBER_0)      &none          &kp LG(SPACE)      &kp LG(RIGHT)  &kp LEFT            &kp DOWN  &kp RIGHT
+&mt LCTRL LG(Z)  &kp LG(X)     &kp LG(C)     &kp LG(V)  &kp LG(B)    &mt CAPSLOCK LANG2       &kp LANG1      &kp LA(LS(LG(L)))  &kp LG(LEFT)   &mkp MB1            &mo 5     &mkp MB2
+&kp LEFT_SHIFT   &kp LEFT_WIN  &kp LEFT_ALT  &mo 3      &lt 4 SPACE  &mo 5                    &kp BACKSPACE  &kp ENTER                                                       &mt RCTRL DEL
             >;
 
             sensor-bindings = <&inc_dec_kp LG(KP_PLUS) LG(KP_MINUS)>;
@@ -141,10 +164,10 @@
 
         ipad_default_layer {
             bindings = <
-&kp ESC         &kp LG(W)         &kp LG(E)     &kp LG(R)  &kp TAB                                             &kp LG(LS(N3))  &trans                 &trans          &kp UP_ARROW    &trans
-&kp LG(A)       &kp LG(S)         &kp LG(D)     &kp LG(F)  &kp LG(G)    &trans                  &trans         &kp LG(H)       &kp LG(RIGHT_BRACKET)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
-&kp LG(Z)       &kp LG(X)         &kp LG(C)     &kp LG(V)  &kp LG(B)    &mt CAPSLOCK LANG2      &kp LANG1      &kp LG(LA(D))   &kp LG(LEFT_BRACKET)   &mkp MB1        &mo 5           &mkp MB2
-&kp LEFT_SHIFT  &kp LEFT_COMMAND  &kp LEFT_ALT  &mo 3      &lt 4 SPACE  &mo 5                   &kp BACKSPACE  &kp ENTER                                                              &mt RCTRL DEL
+&kp ESC           &kp LG(W)         &kp LG(E)     &kp LG(R)  &kp TAB                                                     &kp LG(LS(N3))  &kp LG(LS(N3))         &none           &kp UP_ARROW    &none
+&mt SYSREQ LG(A)  &kp LG(S)         &kp LG(D)     &kp LG(F)  &kp LG(G)    &none                       &none              &kp LG(H)       &kp LG(RIGHT_BRACKET)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
+&mt LCTRL LG(Z)   &kp LG(X)         &kp LG(C)     &kp LG(V)  &kp LG(B)    &mt CAPS LC(LS(SPACE))      &kp LC(LS(SPACE))  &kp LG(LA(D))   &kp LG(LEFT_BRACKET)   &mkp MB1        &mo 5           &mkp MB2
+&kp LEFT_SHIFT    &kp LEFT_COMMAND  &kp LEFT_ALT  &mo 3      &lt 4 SPACE  &mo 5                       &kp BACKSPACE      &kp ENTER                                                              &mt RCTRL DEL
             >;
         };
     };
