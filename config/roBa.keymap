@@ -68,14 +68,6 @@
             label = "PASSWORD1";
         };
 
-        ipad: toipad {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&bt BT_SEL 1>, <&macro_wait_time 200>, <&to 6>;
-
-            label = "TOIPAD";
-        };
-
         mac: mac {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -89,6 +81,14 @@
             #binding-cells = <0>;
             bindings = <&kp CLCK>;
             label = "IPADAPPSWITCH";
+        };
+
+        ipad: ipad {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 1>, <&macro_wait_time 200>, <&to 6>;
+
+            label = "IPAD";
         };
     };
 
@@ -121,7 +121,7 @@
             bindings = <
 &none  &none  &none  &none   &none                       &none         &none         &none         &none  &none
 &none  &none  &none  &none   &none   &none       &none   &bt BT_SEL 3  &bt BT_SEL 4  &none         &none  &none
-&none  &none  &none  &none   &none   &none       &none   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &none  &bt BT_CLR
+&none  &none  &none  &none   &none   &none       &none   &mac          &ipad         &bt BT_SEL 2  &none  &bt BT_CLR
 &none  &none  &none  &trans  &trans  &trans      &trans  &trans                                           &bt BT_CLR_ALL
             >;
         };
