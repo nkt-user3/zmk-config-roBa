@@ -91,7 +91,7 @@
 &kp LEFT_SHIFT   &kp LEFT_WIN  &kp LEFT_ALT  &mo 3      &lt 4 SPACE  &mo 5                    &kp BACKSPACE  &kp ENTER                                                       &mt RCTRL DEL
             >;
 
-            sensor-bindings = <&inc_dec_kp LG(KP_PLUS) LG(KP_MINUS)>;
+            //sensor-bindings = <&inc_dec_kp LG(KP_PLUS) LG(KP_MINUS)>;
         };
 
         setting {
