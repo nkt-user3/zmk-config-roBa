@@ -179,7 +179,7 @@
 
         setting {
             bindings = <
-&none  &none  &none  &none   &none                       &to 0         &to 1         &none         &none  &none
+&none  &none  &none  &none   &none                       &none         &none         &none         &none  &none
 &none  &none  &none  &none   &none   &none       &none   &bt BT_SEL 3  &bt BT_SEL 4  &none         &none  &none
 &none  &none  &none  &none   &none   &none       &none   &bt_mac       &bt_ipad      &bt BT_SEL 2  &none  &bt BT_CLR
 &none  &none  &none  &trans  &trans  &trans      &trans  &trans                                           &bt BT_CLR_ALL
