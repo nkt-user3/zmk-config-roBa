@@ -91,6 +91,19 @@
 
             label = "BT_IPAD";
         };
+
+        bt_win: bt_win {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&tog_off 0 &tog_off 1 &tog_off 2 &tog_off 3 &tog_off 4 &tog_off 5>,
+                <&macro_wait_time 200>,
+                <&bt BT_SEL 2>,
+                <&macro_wait_time 500>,
+                <&tog_on 7>;
+
+            label = "BT_WIN";
+        };
     };
 
     behaviors {
@@ -179,10 +192,19 @@
 
         setting {
             bindings = <
-&none  &none  &none  &none   &none                       &none         &none         &none         &none  &none
-&none  &none  &none  &none   &none   &none       &none   &bt BT_SEL 3  &bt BT_SEL 4  &none         &none  &none
-&none  &none  &none  &none   &none   &none       &none   &bt_mac       &bt_ipad      &bt BT_SEL 2  &none  &bt BT_CLR
-&none  &none  &none  &trans  &trans  &trans      &trans  &trans                                           &bt BT_CLR_ALL
+&none  &none  &none  &none   &none                       &none         &none         &none    &none  &none
+&none  &none  &none  &none   &none   &none       &none   &bt BT_SEL 3  &bt BT_SEL 4  &none    &none  &none
+&none  &none  &none  &none   &none   &none       &none   &bt_mac       &bt_ipad      &bt_win  &none  &bt BT_CLR
+&none  &none  &none  &trans  &trans  &trans      &trans  &trans                                      &bt BT_CLR_ALL
+            >;
+        };
+
+        win_default {
+            bindings = <
+&kp ESC             &kp LA(F4)        &kp LC(E)     &kp LC(R)  &kp TAB                                    &none          &kp LG(LS(N3))  &none           &kp UP_ARROW    &none
+&mt CAPSLOCK LC(A)  &kp LC(S)         &kp LC(D)     &kp LC(F)  &kp LC(G)    &none          &none          &kp LG(M)      &kp LA(RIGHT)   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
+&mt LCTRL LC(Z)     &kp LC(X)         &kp LC(C)     &kp LC(V)  &kp LC(B)    &kp LANG2      &kp LANG1      &kp LG(LA(D))  &kp LA(LEFT)    &mkp MB1        &mo 5           &mkp MB2
+&kp LEFT_SHIFT      &kp LEFT_COMMAND  &kp LEFT_ALT  &mo 3      &lt 2 SPACE  &mo 5          &kp BACKSPACE  &kp ENTER                                                      &mt RCTRL DEL
             >;
         };
     };
