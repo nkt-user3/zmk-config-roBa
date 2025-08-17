@@ -239,10 +239,10 @@
 
         setting {
             bindings = <
-&none  &none  &none  &none   &none                       &none         &none         &none    &none  &none
-&none  &none  &none  &none   &none   &none       &none   &bt BT_SEL 3  &bt BT_SEL 4  &none    &none  &none
-&none  &none  &none  &none   &none   &none       &none   &bt_mac       &bt_ipad      &bt_win  &none  &bt BT_CLR
-&none  &none  &none  &trans  &trans  &trans      &trans  &trans                                      &bt BT_CLR_ALL
+&none  &none  &none  &none   &none                       &none         &none         &none       &none  &none
+&none  &none  &none  &none   &none   &none       &none   &bt BT_SEL 3  &bt BT_SEL 4  &none       &none  &none
+&none  &none  &none  &none   &none   &none       &none   &bt_mac       &bt_ipad      &bt_iphone  &none  &bt BT_CLR
+&none  &none  &none  &trans  &trans  &trans      &trans  &trans                                         &bt BT_CLR_ALL
             >;
         };
     };
