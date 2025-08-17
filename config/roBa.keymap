@@ -22,12 +22,12 @@
         };
 
         function {
-            bindings = <&mo 4>;
+            bindings = <&mo 10>;
             key-positions = <37 13>;
         };
 
         setting {
-            bindings = <&mo 6>;
+            bindings = <&mo 11>;
             key-positions = <11 37>;
         };
     };
@@ -72,9 +72,11 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&tog_off 0 &tog_off 1 &tog_off 2 &tog_off 3 &tog_off 4 &tog_off 5>,
+                <&tog_off 0 &tog_off 1 &tog_off 2 &tog_off 3 &tog_off 4 &tog_off 5 &tog_off 6 &tog_off 7 &tog_off 8 &tog_off 9>,
                 <&macro_wait_time 200>,
-                <&bt BT_SEL 0>;
+                <&bt BT_SEL 0>,
+                <&macro_wait_time 500>,
+                <&tog_on 0>;
 
             label = "BT_MAC";
         };
@@ -83,7 +85,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&tog_off 0 &tog_off 1 &tog_off 2 &tog_off 3 &tog_off 4 &tog_off 5>,
+                <&tog_off 0 &tog_off 1 &tog_off 2 &tog_off 3 &tog_off 4 &tog_off 5 &tog_off 6 &tog_off 7 &tog_off 8 &tog_off 9>,
                 <&macro_wait_time 200>,
                 <&bt BT_SEL 1>,
                 <&macro_wait_time 500>,
@@ -92,17 +94,17 @@
             label = "BT_IPAD";
         };
 
-        bt_win: bt_win {
+        bt_iphone: bt_iphone {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&tog_off 0 &tog_off 1 &tog_off 2 &tog_off 3 &tog_off 4 &tog_off 5 &tog_off 6 &tog_off 7>,
+                <&tog_off 0 &tog_off 1 &tog_off 2 &tog_off 3 &tog_off 4 &tog_off 5 &tog_off 6 &tog_off 7 &tog_off 8 &tog_off 9>,
                 <&macro_wait_time 200>,
                 <&bt BT_SEL 2>,
                 <&macro_wait_time 500>,
-                <&tog_on 7>;
+                <&tog_on 2>;
 
-            label = "BT_WIN";
+            label = "BT_IPHONE";
         };
     };
 
@@ -137,9 +139,9 @@
         mac_default_layer {
             bindings = <
 &kp ESC          &kp LG(W)     &kp LG(E)     &kp LG(R)  &kp TAB                                              &kp LC(UP_ARROW)   &kp F15        &mt F13 LEFT_SHIFT  &kp UP    &mt F14 RIGHT_SHIFT
-&mt CAPS LG(A)   &kp LG(S)     &kp LG(D)     &kp LG(F)  &kp LG(G)    &kp LG(KP_NUMBER_0)      &none          &kp LG(SPACE)      &kp LG(RIGHT)  &kp LEFT            &kp DOWN  &kp RIGHT
-&mt LCTRL LG(Z)  &kp LG(X)     &kp LG(C)     &kp LG(V)  &kp LG(B)    &mt CAPSLOCK LANG2       &kp LANG1      &kp LA(LS(LG(L)))  &kp LG(LEFT)   &mkp MB1            &mo 5     &mkp MB2
-&kp LEFT_SHIFT   &kp LEFT_WIN  &kp LEFT_ALT  &mo 3      &lt 2 SPACE  &mo 5                    &kp BACKSPACE  &kp ENTER                                                       &mt RCTRL DEL
+&kp LG(A)        &kp LG(S)     &kp LG(D)     &kp LG(F)  &kp LG(G)    &kp LG(KP_NUMBER_0)      &none          &kp LG(SPACE)      &kp LG(RIGHT)  &kp LEFT            &kp DOWN  &kp RIGHT
+&mt LCTRL LG(Z)  &kp LG(X)     &kp LG(C)     &kp LG(V)  &kp LG(B)    &mt CAPSLOCK LANG2       &kp LANG1      &kp LA(LS(LG(L)))  &kp LG(LEFT)   &mkp MB1            &mo 8     &mkp MB2
+&kp LEFT_SHIFT   &kp LEFT_WIN  &kp LEFT_ALT  &mo 9      &lt 6 SPACE  &mo 3                    &kp BACKSPACE  &kp ENTER                                                       &mt RCTRL DEL
             >;
 
             sensor-bindings = <&inc_dec_kp LG(KP_PLUS) LG(KP_MINUS)>;
@@ -149,17 +151,71 @@
             bindings = <
 &kp ESC             &kp LG(W)         &kp LG(E)     &kp LG(R)  &kp TAB                                                &none          &kp LG(LS(N3))         &none           &kp UP_ARROW    &none
 &mt CAPSLOCK LG(A)  &kp LG(S)         &kp LG(D)     &kp LG(F)  &kp LG(G)    &none                  &none              &kp LG(H)      &kp LG(RIGHT_BRACKET)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
-&mt LCTRL LG(Z)     &kp LG(X)         &kp LG(C)     &kp LG(V)  &kp LG(B)    &kp LC(LS(SPACE))      &kp LC(LS(SPACE))  &kp LG(LA(D))  &kp LG(LEFT_BRACKET)   &mkp MB1        &mo 5           &mkp MB2
-&kp LEFT_SHIFT      &kp LEFT_COMMAND  &kp LEFT_ALT  &mo 3      &lt 2 SPACE  &mo 5                  &kp BACKSPACE      &kp ENTER                                                             &mt RCTRL DEL
+&mt LCTRL LG(Z)     &kp LG(X)         &kp LG(C)     &kp LG(V)  &kp LG(B)    &kp LC(LS(SPACE))      &kp LC(LS(SPACE))  &kp LG(LA(D))  &kp LG(LEFT_BRACKET)   &mkp MB1        &mo 8           &mkp MB2
+&kp LEFT_SHIFT      &kp LEFT_COMMAND  &kp LEFT_ALT  &mo 9      &lt 6 SPACE  &mo 4                  &kp BACKSPACE      &kp ENTER                                                             &mt RCTRL DEL
+            >;
+        };
+
+        iphone_default {
+            bindings = <
+&kp ESC             &kp LG(W)         &kp LG(E)     &kp LG(R)  &kp TAB                                                &none          &kp LG(LS(N3))         &none           &kp UP_ARROW    &none
+&mt CAPSLOCK LG(A)  &kp LG(S)         &kp LG(D)     &kp LG(F)  &kp LG(G)    &none                  &none              &kp LG(H)      &kp LG(RIGHT_BRACKET)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
+&mt LCTRL LG(Z)     &kp LG(X)         &kp LG(C)     &kp LG(V)  &kp LG(B)    &kp LC(LS(SPACE))      &kp LC(LS(SPACE))  &kp LG(LA(D))  &kp LG(LEFT_BRACKET)   &mkp MB1        &mo 8           &mkp MB2
+&kp LEFT_SHIFT      &kp LEFT_COMMAND  &kp LEFT_ALT  &mo 9      &lt 7 SPACE  &mo 5                  &kp BACKSPACE      &kp ENTER                                                             &mt RCTRL DEL
+            >;
+        };
+
+        mac_input {
+            bindings = <
+&kp Q      &kp W     &kp E     &kp R  &kp T                                       &kp Y      &kp U  &kp I      &kp O    &kp P
+&kp A      &kp S     &kp D     &kp F  &kp G        &kp LG(KP_N0)       &trans     &kp H      &kp J  &kp K      &kp L    &kp MINUS
+&kp Z      &kp X     &kp C     &kp V  &kp B        &mt CAPS LANG2      &kp LANG1  &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH
+&kp LSHFT  &kp LGUI  &kp LALT  &mo 9  &lt 6 SPACE  &trans              &kp BSPC   &kp ENTER                             &kp DELETE
+            >;
+        };
+
+        ipad_input {
+            bindings = <
+&kp Q      &kp W     &kp E     &kp R  &kp T                                                  &kp Y      &kp U  &kp I      &kp O    &kp P
+&kp A      &kp S     &kp D     &kp F  &kp G        &kp LG(KP_N0)          &trans             &kp H      &kp J  &kp K      &kp L    &kp MINUS
+&kp Z      &kp X     &kp C     &kp V  &kp B        &kp LC(LS(SPACE))      &kp LC(LS(SPACE))  &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH
+&kp LSHFT  &kp LGUI  &kp LALT  &mo 9  &lt 6 SPACE  &trans                 &kp BSPC           &kp ENTER                             &kp DELETE
+            >;
+        };
+
+        iphone_input {
+            bindings = <
+&kp Q      &kp W     &kp E     &kp R  &kp T                                                  &kp Y      &kp U  &kp I      &kp O    &kp P
+&kp A      &kp S     &kp D     &kp F  &kp G        &kp LG(KP_N0)          &trans             &kp H      &kp J  &kp K      &kp L    &kp MINUS
+&kp Z      &kp X     &kp C     &kp V  &kp B        &kp LC(LS(SPACE))      &kp LC(LS(SPACE))  &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH
+&kp LSHFT  &kp LGUI  &kp LALT  &mo 9  &lt 7 SPACE  &trans                 &kp BSPC           &kp ENTER                             &kp DELETE
             >;
         };
 
         simbol {
             bindings = <
-&kp GRAVE      &kp LS(DQT)   &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)                      &kp LS(AMPS)  &kp SINGLE_QUOTE  &kp LS(LPAR)  &kp LS(RPAR)   &kp AT
-&kp LS(EQUAL)  &kp LS(PLUS)  &kp LS(STAR)   &kp MINUS     &kp LS(TILDE)  &trans      &trans  &kp COLON     &kp SEMICOLON     &kp LBKT      &kp RBKT       &kp LS(UNDER)
-&none          &kp LS(LT)    &kp LS(GT)     &none         &none          &trans      &none   &none         &none             &kp LS(EXCL)  &kp LS(QMARK)  &kp FSLH
-&trans         &trans        &trans         &trans        &trans         &trans      &trans  &trans                                                       &trans
+&kp EXCLAMATION   &kp DOUBLE_QUOTES  &kp HASH      &kp DOLLAR  &kp PERCENT                        &kp LS(AMPERSAND)  &kp SINGLE_QUOTE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp AT
+&kp LS(QUESTION)  &kp LS(PLUS)       &kp LS(STAR)  &kp MINUS   &kp LS(TILDE)  &trans      &trans  &kp COLON          &kp SEMICOLON     &kp LBKT              &kp RBKT               &kp LS(UNDERSCORE)
+&none             &none              &none         &none       &none          &trans      &none   &none              &none             &kp EXCLAMATION       &kp QUESTION           &kp FSLH
+&trans            &trans             &trans        &trans      &trans         &trans      &trans  &trans                                                                            &trans
+            >;
+        };
+
+        iphone_simbol {
+            bindings = <
+&kp EXCLAMATION  &kp AT_SIGN   &kp HASH      &kp DOLLAR  &kp PERCENT                        &kp CARET  &kp AMPERSAND  &kp ASTRK          &kp RIGHT_PARENTHESIS  &kp LEFT_BRACKET
+&kp QUESTION     &kp LS(PLUS)  &kp LS(STAR)  &kp MINUS   &kp LS(TILDE)  &trans      &trans  &kp SQT    &kp SEMICOLON  &kp RIGHT_BRACKET  &kp GRAVE              &kp LS(MINUS)
+&none            &none         &none         &none       &none          &trans      &none   &none      &none          &kp EXCLAMATION    &kp QUESTION           &kp FSLH
+&trans           &trans        &trans        &trans      &trans         &trans      &trans  &trans                                                              &trans
+            >;
+        };
+
+        scroll {
+            bindings = <
+&none  &none  &none  &none  &none                    &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none      &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none      &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none      &none  &none                       &none
             >;
         };
 
@@ -181,30 +237,12 @@
             >;
         };
 
-        input {
-            bindings = <
-&kp Q   &kp W   &kp E   &kp R   &kp T                       &kp Y   &kp U  &kp I      &kp O    &kp P
-&kp A   &kp S   &kp D   &kp F   &kp G   &trans      &trans  &kp H   &kp J  &kp K      &kp L    &kp MINUS
-&kp Z   &kp X   &kp C   &kp V   &kp B   &trans      &trans  &kp N   &kp M  &kp COMMA  &kp DOT  &kp FSLH
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                             &trans
-            >;
-        };
-
         setting {
             bindings = <
 &none  &none  &none  &none   &none                       &none         &none         &none    &none  &none
 &none  &none  &none  &none   &none   &none       &none   &bt BT_SEL 3  &bt BT_SEL 4  &none    &none  &none
 &none  &none  &none  &none   &none   &none       &none   &bt_mac       &bt_ipad      &bt_win  &none  &bt BT_CLR
 &none  &none  &none  &trans  &trans  &trans      &trans  &trans                                      &bt BT_CLR_ALL
-            >;
-        };
-
-        win_default {
-            bindings = <
-&kp ESC             &kp LA(F4)        &kp LC(E)     &kp LC(R)  &kp TAB                                    &none          &kp LG(LS(N3))  &none           &kp UP_ARROW    &none
-&mt CAPSLOCK LC(A)  &kp LC(S)         &kp LC(D)     &kp LC(F)  &kp LC(G)    &none          &none          &kp LG(M)      &kp LA(RIGHT)   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
-&mt LCTRL LC(Z)     &kp LC(X)         &kp LC(C)     &kp LC(V)  &kp LC(B)    &kp LANG2      &kp LANG1      &kp LG(LA(D))  &kp LA(LEFT)    &mkp MB1        &mo 5           &mkp MB2
-&kp LEFT_SHIFT      &kp LEFT_COMMAND  &kp LEFT_ALT  &mo 3      &lt 2 SPACE  &mo 5          &kp BACKSPACE  &kp ENTER                                                      &mt RCTRL DEL
             >;
         };
     };
